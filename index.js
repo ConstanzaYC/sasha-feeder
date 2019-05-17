@@ -30,8 +30,7 @@ board.on('ready', function() {
 	notifier(imap)
 	.on('mail', mail => {
 		if (mail.from[0].address === process.env.sender && mail.subject === process.env.subject) {
-			//feedTheCats();
-			console.log('hola');
+			feedTheCats();
 		} else {
 			console.log('El mail ' + mail.from[0].address + ' no tiene autorización para alimentar a Orson y Haku');
 		}
